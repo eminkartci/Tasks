@@ -26,7 +26,7 @@ Title: Bank Account
     e. save_customer
     
 
-2. Behaviout Explanations
+2. Behaviour Explanations
    
    a -> customer can upload money to his/her balance
    b -> customer can withdraw money but s/he cannot withdraw greater than his/her account.
