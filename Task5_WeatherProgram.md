@@ -1,5 +1,5 @@
 
-### Task 4
+### Task 5
 ```
 Title: Basic Weather Analysis
 
@@ -37,9 +37,9 @@ Day 5's high temp: 37
 Day 6's high temp: 46
 Day 7's high temp: 53
 
-Average temp = 44.6
-
+Average tempreture of 7 days: 44.6
 4 days were above average. 
+
 ```
 ---
 ### Thanks
