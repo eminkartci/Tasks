@@ -54,6 +54,15 @@ Title: Timing & Optimizing
 
 ```
 ### Sample Case
+
+<-----------> Time Report <----------->
+Total Time      : 17.6  sn
+Break Point 1   : 5     sn
+Break Point 2   : 7.6   sn
+Break Point 3   : 5     sn
+
+@A-MEAN Company 2021
+<------------------------------------>
 ```
 
 
