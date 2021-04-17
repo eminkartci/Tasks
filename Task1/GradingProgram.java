@@ -1,4 +1,12 @@
 
+
+/*
+
+Author: Emin Kartci
+GitHub: eminkartci
+Date  : 17 April 2021
+*/
+
 import java.util.Scanner;
 
 public class GradingProgram{
