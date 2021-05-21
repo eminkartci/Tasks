@@ -30,7 +30,7 @@ public class Question1 {
 
     }
 
-
+                                                                    //           0  1  2  3  4
     public static void randUpdate(HashMap<Integer, Integer> hash){  // Keyset: 234 31 35 22 12
                                                                     // Valset: 42  231 4 634 2
 
@@ -45,6 +45,12 @@ public class Question1 {
         for(int x :hash.keySet() ) {
         	keys[i] = x;
         	i++;
+        }
+
+        int newVal = random.nextInt(10000);
+
+        while(newVal == hash.get(keys[randomKeyIndex])){
+            newVal = random.nextInt(10000);
         }
         
         hash.replace(keys[randomKeyIndex], random.nextInt(10000));
