@@ -2,9 +2,9 @@
 class Player:
 
     # Constructor
-    def __init__(self,id,nickname) -> None:
+    def __init__(self,id) -> None:
         self.id         = id
-        self.nickname   = nickname
+        self.get_nickname()
 
     def __str__(self) -> str:
         return f"""
@@ -12,8 +12,14 @@ class Player:
 | Nickname: {self.nickname}
         """
 
+    # Behaviours
+    def get_nickname(self):
+        self.nickname = input("Nickname: ")
 
-p1 = Player(1,"eminkartci")
-p2 = Player(2,"denizucgun")
 
+p1 = Player(1)
+p2 = Player(2)
+
+
+print(p1)
 print(p2)
