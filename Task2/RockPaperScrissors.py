@@ -4,7 +4,7 @@ class Player:
     # Constructor
     def __init__(self,id) -> None:
         self.id         = id
-        self.selection  = None
+        self.selection  = None # initialize
         self.get_nickname()
 
     def __str__(self) -> str:
@@ -60,6 +60,5 @@ class Game():
 
 
 game = Game()
-
 game.play()
 
