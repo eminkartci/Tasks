@@ -3,7 +3,7 @@
 ```
 Title: Bank Account
 
-1. Create a "Customer" object
+1. Create a "Customer" class
 
     Properties
     ------------------------
