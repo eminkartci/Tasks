@@ -26,13 +26,9 @@ public class GradingProgram{
 
         System.out.println("\n\n\n --- Grade Calculator Program --- \n\n");
 
-        try{
-            System.out.println("Midterm 1 : "); midtermGrade1   = myScan.nextDouble();
-            System.out.println("Midterm 2 : "); midtermGrade2   = myScan.nextDouble();
-            System.out.println("Final     : "); finalGrade      = myScan.nextDouble();
-        }catch(Exception e){
-            System.out.println("Please enter a valid number 0-100 !!");
-        }
+
+        get_grades("Interim Exam: ",myScan);
+
         // control grades
         if(midtermGrade1 < 0 || midtermGrade1 > 100 || midtermGrade2 < 0 || midtermGrade2 > 100 || finalGrade < 0 || finalGrade > 100){
             System.out.println("Grade should between 0-100 !!");
@@ -85,4 +81,23 @@ public class GradingProgram{
 
     }
 
+    public static double[] get_grades(String examName1,Scanner gradeScan){
+
+        double[] grades = new double[3];
+
+        try{
+            System.out.println(examName1)       ; grades[0]   = gradeScan.nextDouble();
+            System.out.println("Midterm 2 : ")  ; grades[1]   = gradeScan.nextDouble();
+            System.out.println("Final     : ")  ; grades[2]   = gradeScan.nextDouble();
+            return grades;
+        }catch(Exception e){
+            System.out.println("Please enter a valid input 0-100 !!");
+            return get_grades(examName1, gradeScan);
+        }
+
+        
+   
+    }
+
+    
 }
