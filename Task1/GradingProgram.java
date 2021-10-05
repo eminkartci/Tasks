@@ -5,6 +5,7 @@
 Author: Emin Kartci
 GitHub: eminkartci
 Date  : 17 April 2021
+
 */
 
 import java.util.Scanner;
@@ -14,20 +15,24 @@ public class GradingProgram{
     public static void main(String[] args){
 
         // create exam grades
-        double midtermGrade1= 0;
-        double midtermGrade2= 0;
-        double finalGrade   = 0;
-        double average      = 0;
-        char   grade        = 'F';
+        double midtermGrade1 = 0;
+        double midtermGrade2 = 0;
+        double finalGrade    = 0;
+        double average       = 0;
+        char   grade         = 'F';
 
         // Create a scanner
         Scanner myScan = new Scanner(System.in);
 
         System.out.println("\n\n\n --- Grade Calculator Program --- \n\n");
-        System.out.println("Midterm 1 : "); midtermGrade1   = myScan.nextDouble();
-        System.out.println("Midterm 2 : "); midtermGrade2   = myScan.nextDouble();
-        System.out.println("Final     : "); finalGrade      = myScan.nextDouble();
 
+        try{
+            System.out.println("Midterm 1 : "); midtermGrade1   = myScan.nextDouble();
+            System.out.println("Midterm 2 : "); midtermGrade2   = myScan.nextDouble();
+            System.out.println("Final     : "); finalGrade      = myScan.nextDouble();
+        }catch(Exception e){
+            System.out.println("Please enter a valid number 0-100 !!");
+        }
         // control grades
         if(midtermGrade1 < 0 || midtermGrade1 > 100 || midtermGrade2 < 0 || midtermGrade2 > 100 || finalGrade < 0 || finalGrade > 100){
             System.out.println("Grade should between 0-100 !!");
