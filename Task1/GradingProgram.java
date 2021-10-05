@@ -27,7 +27,10 @@ public class GradingProgram{
         System.out.println("\n\n\n --- Grade Calculator Program --- \n\n");
 
 
-        get_grades("Interim Exam: ",myScan);
+        double[] exams = get_grades("Emin Exam: ",myScan);
+        midtermGrade1 = exams[0];
+        midtermGrade2 = exams[1];
+        finalGrade    = exams[2];
 
         // control grades
         if(midtermGrade1 < 0 || midtermGrade1 > 100 || midtermGrade2 < 0 || midtermGrade2 > 100 || finalGrade < 0 || finalGrade > 100){
