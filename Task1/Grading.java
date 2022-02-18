@@ -23,6 +23,8 @@ public class Grading {
         //Calculate the average
         double avg = (midterm1+midterm2+finalExam)/3;
 
+        // Deneme Commıt
+
         String outputStr =  "\n****** RESULTS ******\n" +
                             "Midterm 1 : "+ midterm1 +"\n" +
                             "Midterm 2 : "+ midterm2 +"\n" +
