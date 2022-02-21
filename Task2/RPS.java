@@ -32,7 +32,7 @@ class Player{
 
         System.out.print("Enter your nickname : ");
         newPlayer.nickname = input.nextLine();
-
+        input.close();
         return newPlayer;
         
     }
@@ -45,7 +45,7 @@ class Player{
         System.out.println(outputStr);
         System.out.print("Select what you want : ");
         this.selection = input.nextLine();
-        
+        input.close();
     }
 
 }
