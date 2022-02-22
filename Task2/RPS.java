@@ -3,13 +3,13 @@ import java.util.Scanner;
 public class RPS {
 
     public static void main(String[] args) {
-        
+
         Game g = new Game();
 
         g.play();
-        
+
     }
-    
+
 }
 
 class Player{
@@ -32,9 +32,9 @@ class Player{
 
         System.out.print("Enter your nickname : ");
         newPlayer.nickname = input.nextLine();
-        input.close();
+
         return newPlayer;
-        
+
     }
     public void gameSelection() {
         Scanner input = new Scanner(System.in);
@@ -45,7 +45,7 @@ class Player{
         System.out.println(outputStr);
         System.out.print("Select what you want : ");
         this.selection = input.nextLine();
-        input.close();
+
     }
 
 }
@@ -69,11 +69,9 @@ class Game{
     }
 
     public void winner(){
-        
+
     }
 
 
 
 }
-
-
