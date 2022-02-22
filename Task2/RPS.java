@@ -8,7 +8,7 @@ public class RPS {
 
         g.play();
 
-    }
+    
 
 }
 
@@ -20,6 +20,7 @@ class Player{
     // int winStack;
     // double exp;
     // int level;
+    public static Scanner input = new Scanner(System.in);
 
     // Constructor
 
@@ -27,27 +28,30 @@ class Player{
     // Behaviour
     public static Player newPlayer() {
 
-        Scanner input = new Scanner(System.in);
         Player newPlayer = new Player();
 
         System.out.print("Enter your nickname : ");
         newPlayer.nickname = input.nextLine();
-
+        
         return newPlayer;
 
     }
     public void gameSelection() {
-        Scanner input = new Scanner(System.in);
+        
         String outputStr = 
                            "Rock     : 1"+
                            "\nScissors : 2"+
                            "\nPaper    : 3";
+
         System.out.println(outputStr);
+
         System.out.print("Select what you want : ");
-        this.selection = input.nextLine();
+
+        this.selection = this.input.nextLine();
+        
 
     }
-
+    
 }
 
 class Game{
@@ -74,4 +78,5 @@ class Game{
 
 
 
+    }
 }
