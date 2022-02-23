@@ -1,12 +1,17 @@
 import java.util.Scanner;
 
+import javax.swing.DefaultRowSorter;
+
 public class RPS {
 
     public static void main(String[] args) {
 
         Game g = new Game();
-
+        g.init();
         g.play();
+        g.winner();
+
+    }
 
     
 
@@ -36,12 +41,13 @@ class Player{
         return newPlayer;
 
     }
+
     public void gameSelection() {
         
         String outputStr = 
-                           "Rock     : 1"+
-                           "\nScissors : 2"+
-                           "\nPaper    : 3";
+                           "Rock       : 1"+
+                           "\nPaper    : 2"+
+                           "\nScissors : 3";
 
         System.out.println(outputStr);
 
@@ -59,24 +65,45 @@ class Game{
     // Attrbıutes
     Player p1;
     Player p2;
+    Player winner;
 
-    // Constructor
-    public Game(){
+    // Constructor 
+
+    // Behaviour
+    public void init(){
         this.p1 = Player.newPlayer();
         this.p2 = Player.newPlayer();
     }
 
-    // Behaviour
     public void play(){
         p1.gameSelection();
         p2.gameSelection();
     }
 
     public void winner(){
-
+        
+        // IF P1: Rock P2: Paper
+        if(p1.selection == 1 && p2.selection == 2){
+            this.winner = p2;
+        }
+        else if (p1.selection == 2 && p2.selection == 1){
+            this.winner = p1;
+        }
+        else if (p1.selection == 1 && p2.selection == 3){
+            this.winner = p1;
+        }
+        else if (p1.selection == 3 && p2.selection == 1){
+            this.winner = p2;
+        }
+        else if (p1.selection == 1 && p2.selection == 1){
+            System.out.println("Draw ! ");
+        }
+        else if (p1.selection == 2 && p2.selection == 2){
+            System.out.println("Draw ! ");
+        }
+        else if (p1.selection == 3 && p2.selection == 3){
+            System.out.println("Draw ! ");
+        }
     }
 
-
-
-    }
 }
