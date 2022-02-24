@@ -85,19 +85,23 @@ class Game{
         // IF P1: Rock P2: Paper
         if(p1.selection == 1 && p2.selection == 2){
             this.winner = p2;
-            System.out.println(this.winner);
+            System.out.println(this.winner.nickname);
         }
         else if (p1.selection == 2 && p2.selection == 1){
             this.winner = p1;
-            System.out.println(this.winner);
+            System.out.println(this.winner.nickname);
         }
         else if (p1.selection == 1 && p2.selection == 3){
             this.winner = p1;
-            System.out.println(this.winner);
+            System.out.println(this.winner.nickname);
+        }
+        else if (p1.selection == 2 && p2.selection == 3){
+            this.winner = p2;
+            System.out.println(this.winner.nickname);
         }
         else if (p1.selection == 3 && p2.selection == 1){
             this.winner = p2;
-            System.out.println(this.winner);
+            System.out.println(this.winner.nickname);
         }
         else if (p1.selection == 1 && p2.selection == 1){
             System.out.println("Draw ! ");
