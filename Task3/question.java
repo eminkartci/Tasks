@@ -1,7 +1,15 @@
+// Bora Şimşek 24/02/22
+// GitHub: 
+// @2022 All Rights Reserved
+
+
+import java.util.Scanner;
 public class question {
     public static void main(String[] args) {
-        
-
+         
+        bank_operations xyz = new bank_operations();
+        xyz.init();
+        xyz.Selection();
 
     }
 
@@ -75,20 +83,42 @@ class Customer {
     e. TCKN
     f. Balance
 */
-
+    String name, surname;
+    Integer Id, BirthYear, TCKN;
+    
+    public static Scanner input = new Scanner(System.in);
     /*Constructor
     ------------------------
 */
 
 
     //Behaviours
+    public static Customer newCustomer() {
+        Customer newCustomer = new Customer();
+        System.out.print("Enter your name : ");
+        newCustomer.name = input.nextLine();
+        System.out.print("Enter your surname : ");
+        newCustomer.surname = input.nextLine();
+        System.out.print("Enter your birth year : ");
+        newCustomer.BirthYear = input.nextInt();
+        System.out.print("Enter your first 4 digit of TCKN : ");
+        newCustomer.TCKN = input.nextInt();
+
+        String outputString = "Hi "+ newCustomer.name +" "+ newCustomer.surname +"\n"+
+                              "Welcome to Bora Bank";
+        //aklıma bilgileri teyit etme fonksiyonu geldi, if ile doğru mu yanlış mı diye kullanıcıya son bir kez daha sor.
+        System.out.println(outputString);
+
+        return newCustomer;
+    }
 
 }
 
 class bank_operations {
     //Properties
-    
-
+    Double Balance, money;
+    Customer p1;
+    double InitialMoney = 0;
     /*Constructor
     ------------------------
 */
@@ -102,8 +132,67 @@ class bank_operations {
     d. show_customer
     e. save_customer
 */
+    public void init() {
+        this.p1 = Customer.newCustomer();
 
+    }
+    public void Selection() {
+        String OutputStr = "a. upload_money"+"\n"+
+                           "b. withdraw_money"+"\n"+
+                           "c. take_credit"+"\n"+
+                           "d. show_customer"+"\n"+
+                           "e. save_customer";
+        System.out.println(OutputStr);
 
+        System.out.println("Select what you want : ");
+        Scanner selection = new Scanner(System.in);
+        String userChoice = selection.next();
+        if (userChoice.equalsIgnoreCase("a")) {
+            bank_operations.upload_money();
+            
+        }
+        else if (userChoice.equals("b")) {
+            bank_operations.withdraw_money();
+        }
+        else if (userChoice.equals("c")) {
+            bank_operations.take_credit();
+        }
+        else if (userChoice.equals("d")) {
+            bank_operations.show_customer();
+        }
+        else if (userChoice.equals("e")) {
+            bank_operations.save_customer();
+        }
+
+        selection.close();
+    }
+   
+    public static void upload_money() {
+        
+        //User chose option a
+
+        //Get the money input from user
+
+        //add the money if s/he have before
+
+        //Show the resultant balance
+    }
+    
+    public static void withdraw_money() {
+               
+    }
+    
+    public static void take_credit() {
+               
+    }
+    
+    public static void show_customer() {
+               
+    }
+
+    public static void save_customer() {
+               
+    }
 
 }
 
