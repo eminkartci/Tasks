@@ -84,7 +84,7 @@ class Customer {
     f. Balance
 */
     String name, surname;
-    Integer Id, BirthYear, TCKN;
+    int Id, BirthYear, TCKN;
     
     public static Scanner input = new Scanner(System.in);
     /*Constructor
@@ -116,13 +116,14 @@ class Customer {
 
 class bank_operations {
     //Properties
-    Double Balance, money;
+    Double Balance, money, debt;
     Customer p1;
-    double InitialMoney = 0;
+    double sum = 0;
+    static double newBalance = 0;
     /*Constructor
     ------------------------
 */
-
+    static Scanner input = new Scanner(System.in);
 
     /*Behaviours 
     ------------------------
@@ -144,53 +145,66 @@ class bank_operations {
                            "e. save_customer";
         System.out.println(OutputStr);
 
-        System.out.println("Select what you want : ");
+        System.out.print("Select what you want : ");
         Scanner selection = new Scanner(System.in);
         String userChoice = selection.next();
         if (userChoice.equalsIgnoreCase("a")) {
-            bank_operations.upload_money();
+            this.upload_money();
             
         }
         else if (userChoice.equals("b")) {
-            bank_operations.withdraw_money();
+            this.withdraw_money();
         }
         else if (userChoice.equals("c")) {
-            bank_operations.take_credit();
+            this.take_credit();
         }
         else if (userChoice.equals("d")) {
-            bank_operations.show_customer();
+            this.show_customer();
         }
         else if (userChoice.equals("e")) {
-            bank_operations.save_customer();
+            this.save_customer();
         }
 
         selection.close();
     }
    
-    public static void upload_money() {
+    public void upload_money() {
         
-        //User chose option a
-
+        //User chosed option a
+        
         //Get the money input from user
+        System.out.println("Enter the amount of money : ");
+        double amount = input.nextDouble();    
 
         //add the money if s/he have before
+         newBalance = this.sum + amount;
+        
 
         //Show the resultant balance
+        System.out.println("Balance : "+newBalance);
     }
     
-    public static void withdraw_money() {
+    public void withdraw_money() {
+        //Get the money input
+        System.out.println("enter the amount of money that you want to withdraw : ");
+        double withdrawMoney =input.nextDouble();
+
+        //Remove the input from sum
+        double sum = newBalance - withdrawMoney;
+
+        //Display the result
+        System.out.print("New balance = "+sum);
+    }
+    
+    public void take_credit() {
                
     }
     
-    public static void take_credit() {
-               
-    }
-    
-    public static void show_customer() {
+    public void show_customer() {
                
     }
 
-    public static void save_customer() {
+    public void save_customer() {
                
     }
 
